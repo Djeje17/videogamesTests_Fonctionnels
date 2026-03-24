@@ -1,0 +1,37 @@
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* On augmente un peu l'espace entre les champs */
+  width: 100%; /* Prend toute la largeur du parent */
+  max-width: 450px; /* ON AUGMENTE ICI (était à 300px) */
+  margin: 2rem auto; /* Reste centré horizontalement */
+  align-items: center;
+}
+
+/* On s'assure que les inputs et le bouton prennent 100% du formulaire */
+form input,
+form button {
+  width: 100%; /* Le bouton et les inputs seront aussi larges que le formulaire */
+  padding: 12px; /* Un peu plus de confort pour cliquer */
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  background-color: #ff1493ad; /* Ta couleur rose néon */
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+  border: none;
+  margin-top: 10px;
+  margin-bottom: 15px; /* Un peu d'espace au dessus du bouton */
+}
+
+form button:hover {
+  background-color: #ff1493;
+  transform: scale(1.02); /* Petit effet de zoom au survol */
+}
+h3 {
+  color: coral;
+}

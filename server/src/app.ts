@@ -1,11 +1,11 @@
 // Load the express module to create a web application
-
-import express from "express";
+import cookieParser from "cookie-parser";
+import express, { type Request, type Response } from "express";
 
 const app = express();
-
+app.use(express.json());
 // Configure it
-
+app.use(cookieParser());
 /* ************************************************************************* */
 
 // CORS Handling: Why is the current code present and do I need to define specific allowed origins for my project?
@@ -20,10 +20,15 @@ const app = express();
 
 import cors from "cors";
 
-if (process.env.CLIENT_URL != null) {
-  app.use(cors({ origin: [process.env.CLIENT_URL] }));
-}
-
+//if (process.env.CLIENT_URL != null) {
+// app.use(cors({ origin: [process.env.CLIENT_URL], credentials: true }));
+//}
+app.use(
+  cors({
+    origin: "http://localhost:3000", // Ton port client (3000 ou 5173 ?)
+    credentials: true, // Permet d'accepter les cookies
+  }),
+);
 // If you need to allow extra origins, you can add something like this:
 
 /*
@@ -64,7 +69,7 @@ import router from "./router";
 
 // Mount the API router under the "/api" endpoint
 app.use(router);
-
+app.use("/api", router);
 /* ************************************************************************* */
 
 // Production-ready setup: What is it for?
@@ -116,9 +121,6 @@ const logErrors: ErrorRequestHandler = (err, req, res, next) => {
   // Pass the error to the next middleware in the stack
   next(err);
 };
-
-// Mount the logErrors middleware globally
-app.use(logErrors);
 
 /* ************************************************************************* */
 

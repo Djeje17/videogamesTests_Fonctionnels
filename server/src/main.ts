@@ -4,8 +4,7 @@ import "dotenv/config";
 // Check database connection
 // Note: This is optional and can be removed if the database connection
 // is not required when starting the application
-import "../database/checkConnection";
-
+import "dotenv/config"; // <--- INDISPENSABLE
 // Import the Express application from ./app
 import app from "./app";
 

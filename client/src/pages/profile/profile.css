@@ -1,0 +1,25 @@
+.card {
+  text-align: center;
+}
+.user-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.user-card a {
+  color: #fff;
+}
+
+.user-card-item {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding: 10px;
+  border: 1px solid rgb(252, 3, 148);
+  border-radius: 8px;
+}

@@ -1,0 +1,12 @@
+.wcs {
+  text-decoration: none; /* Enlève le soulignement du lien */
+  color: #eee; /* Couleur du texte (blanc cassé) */
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espace entre l'icône et le texte */
+}
+
+/* Optionnel : changer la couleur au survol */
+footer:hover {
+  background-color: #538b8d; /* Un poil plus foncé au survol */
+}
