@@ -1,5 +1,5 @@
 import express from "express";
-import { createGames, getGames } from "./controller/GameController.js";
+import { createGames, getGames } from "./controller/GameController";
 import {
   createUsers,
   getOneUser,
@@ -12,7 +12,9 @@ import { verifyToken } from "./middleware.js";
 const router = express.Router();
 
 router.get("/users", getUsers);
-router.post("/user", createUsers);
+router.get("/users/:id", getOneUser);
+router.post("/users", createUsers);
+
 router.get("/games", getGames);
 router.post("/game", createGames);
 router.post("/connection", connection);

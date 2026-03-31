@@ -5,19 +5,29 @@
     "check-types": "tsc --noEmit",
     "dev": "vite --host",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "jest"
   },
   "dependencies": {
+    "lucide-react": "^1.7.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-router": "^7.4.1",
     "react-router-dom": "^7.13.1"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
     "@types/react": "^19.0.12",
     "@types/react-dom": "^19.0.4",
+    "@types/testing-library__jest-dom": "^5.14.9",
     "@vitejs/plugin-react": "^4.3.4",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^30.3.0",
+    "jest-environment-jsdom": "^30.3.0",
+    "ts-jest": "^29.4.6",
     "typescript": "^5.8.2",
-    "vite": "^6.2.4"
+    "vite": "^6.2.4",
+    "whatwg-fetch": "^3.6.20"
   }
 }

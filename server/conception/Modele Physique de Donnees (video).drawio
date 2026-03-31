@@ -1,0 +1,31 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.1 Chrome/142.0.7444.265 Electron/39.8.0 Safari/537.36" version="29.6.1">
+  <diagram name="Page-1" id="hyGx5_th2x6upyFPUyuW">
+    <mxGraphModel dx="1410" dy="825" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="MJFxXOZdiNkhMIpDc_od-1" parent="1" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="user" vertex="1">
+          <mxGeometry height="200" width="290" x="269" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="MJFxXOZdiNkhMIpDc_od-2" parent="MJFxXOZdiNkhMIpDc_od-1" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;whiteSpace=wrap;" value="- id_user&amp;nbsp; &amp;nbsp; &amp;nbsp; : AUTO INCREMENT NOT NULL&lt;div&gt;- username&amp;nbsp; : VARCHAR(150) NOT NULL UNIQUE&lt;/div&gt;&lt;div&gt;- email&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;: VARCHAR(250) NOT NULL UNIQUE&lt;/div&gt;&lt;div&gt;- password&amp;nbsp; : VARCHAR(250) NOT NULL&lt;/div&gt;&lt;div&gt;- created_at : DATETIME&lt;/div&gt;" vertex="1">
+          <mxGeometry height="150" width="290" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="MJFxXOZdiNkhMIpDc_od-5" parent="1" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="game" vertex="1">
+          <mxGeometry height="240" width="290" x="269" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="MJFxXOZdiNkhMIpDc_od-6" parent="MJFxXOZdiNkhMIpDc_od-5" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;whiteSpace=wrap;" value="- id_game&amp;nbsp; &amp;nbsp;: AUTO INCREMENT NOT NULL&lt;div&gt;- title&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;: VARCHAR(250 NOT NULL&lt;/div&gt;&lt;div&gt;- descrition : TEXT NOT NULL&lt;/div&gt;&lt;div&gt;- engine&amp;nbsp; &amp;nbsp; &amp;nbsp;: VARCHAR(100)&lt;/div&gt;&lt;div&gt;- status&amp;nbsp; &amp;nbsp; &amp;nbsp; : ENUM&lt;/div&gt;&lt;div&gt;- user_id&amp;nbsp; &amp;nbsp; : AUTO INCREMENT NOT NULL&lt;/div&gt;" vertex="1">
+          <mxGeometry height="190" width="290" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="MJFxXOZdiNkhMIpDc_od-10" parent="1" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="task" vertex="1">
+          <mxGeometry height="200" width="290" x="269" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="MJFxXOZdiNkhMIpDc_od-11" parent="MJFxXOZdiNkhMIpDc_od-10" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;whiteSpace=wrap;" value="- id_task&amp;nbsp; &amp;nbsp; : AUTO INCREMENT NOT NULL&lt;div&gt;- label&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; : VARCHAR(250)&lt;/div&gt;&lt;div&gt;- category : ENUM&lt;/div&gt;&lt;div&gt;- priority&amp;nbsp; &amp;nbsp; : INT&lt;/div&gt;&lt;div&gt;- game_id : AUTO INCREMENT&lt;/div&gt;" vertex="1">
+          <mxGeometry height="150" width="290" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="MJFxXOZdiNkhMIpDc_od-12" parent="1" style="text;strokeColor=default;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;rounded=1;" value="Modéle Physique de Données" vertex="1">
+          <mxGeometry height="40" width="370" x="230" y="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
