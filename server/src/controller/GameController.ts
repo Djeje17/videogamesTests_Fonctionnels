@@ -1,5 +1,5 @@
 import type { Request, Response } from "express";
-import type { IGame } from "../../../shared/interface/GameInterface.js";
+import type { IGame } from "../../../interface/GameInterface";
 import * as GameRepository from "../repository/GameRepository.js";
 
 export const getGames = async (req: Request, res: Response) => {

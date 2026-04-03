@@ -1,5 +1,5 @@
 import type { Request, Response } from "express";
-import type { ITask } from "../../../shared/interface/TaskInterface.js";
+import type { ITask } from "../../../interface/TaskInterface";
 import * as TaskRepository from "../repository/TaskRepository.js";
 
 export const getTask = async (req: Request, res: Response) => {

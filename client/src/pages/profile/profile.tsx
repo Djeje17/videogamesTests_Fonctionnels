@@ -1,5 +1,5 @@
 import { Outlet, useRouteLoaderData } from "react-router-dom";
-import type { IUser } from "../../../../shared/interface/UserInterface";
+import type { IUser } from "../../../../interface/UserInterface";
 import "./profile.css";
 export default function User() {
   const user = useRouteLoaderData("root") as IUser | null;
@@ -10,18 +10,20 @@ export default function User() {
       <div className="user-card">
         {/* On retire le .map() et le <Link> car on est déjà sur la page finale */}
         <div className="user-card-item">
-          <h2 className="card">Mon Profil</h2>
+          <h2 className="card" style={{ color: "#f76605" }}>
+            Mon Profil
+          </h2>
           <hr />
-          <p className="card">
+          <p className="card" style={{ color: "#333333" }}>
             <strong>Bonjour {user.username}</strong>
           </p>
-          <p>
+          <p style={{ color: "#333333" }}>
             <strong>Username :</strong> {user.username}
           </p>
-          <p>
+          <p style={{ color: "#333333" }}>
             <strong>Email :</strong> {user.email}
           </p>
-          <p>
+          <p style={{ color: "#333333" }}>
             <strong>Membre depuis le :</strong>{" "}
             {user.created_at
               ? new Date(user.created_at).toLocaleDateString()

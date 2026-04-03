@@ -1,6 +1,6 @@
 import type { NextFunction, Request, Response } from "express";
 import jwt from "jsonwebtoken";
-import type { IUser } from "../../shared/interface/UserInterface.js";
+import type { IUser } from "../../interface/UserInterface";
 import * as UserRepository from "./repository/UserRepository.js";
 
 export interface AuthRequest extends Request {

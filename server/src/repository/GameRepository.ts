@@ -1,5 +1,5 @@
 import type { ResultSetHeader } from "mysql2";
-import type { IGame } from "../../../shared/interface/GameInterface.js";
+import type { IGame } from "../../../interface/GameInterface";
 import { client } from "../../database/client.js";
 
 export const getAll = async (): Promise<IGame[]> => {

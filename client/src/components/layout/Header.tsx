@@ -4,7 +4,7 @@ import {
   useRevalidator,
   useRouteLoaderData,
 } from "react-router-dom";
-import type { IUser } from "../../../../shared/interface/UserInterface";
+import type { IUser } from "../../../../interface/UserInterface";
 export default function Header() {
   //const navigate = useNavigate();
   const revalidator = useRevalidator();

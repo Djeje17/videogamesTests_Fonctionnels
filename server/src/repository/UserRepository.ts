@@ -1,5 +1,5 @@
 import type { ResultSetHeader } from "mysql2";
-import type { IUser } from "../../../shared/interface/UserInterface.js";
+import type { IUser } from "../../../interface/UserInterface";
 import { client } from "../../database/client.js";
 
 export const getAll = async (): Promise<IUser[]> => {

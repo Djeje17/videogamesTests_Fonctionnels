@@ -81,9 +81,11 @@ function Home() {
         ))}
       </div>
 
-      <div style={{ marginTop: "20px" }}>
-        <h2>"L'aventure commence ici."</h2>
-        <p>Chaque grand jeu a commencé par une simple idée...</p>
+      <div style={{ marginTop: "70px" }}>
+        <h2 style={{ color: "#313120" }}>"L'aventure commence ici."</h2>
+        <p style={{ color: "#242219" }}>
+          Chaque grand jeu a commencé par une simple idée...
+        </p>
       </div>
     </main>
   );

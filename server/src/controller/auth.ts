@@ -2,7 +2,7 @@ import * as argon2 from "argon2";
 import dotenv from "dotenv";
 import type { Request, Response } from "express";
 import jwt from "jsonwebtoken";
-import type { IUser } from "../../../shared/interface/UserInterface.js";
+import type { IUser } from "../../../interface/UserInterface";
 import * as UserRepository from "../repository/UserRepository.js";
 
 dotenv.config();

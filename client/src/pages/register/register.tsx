@@ -38,7 +38,7 @@ export default function Register() {
 
     try {
       // 1. Appel au backend avec fetch
-      const response = await fetch("http://localhost:3310/api/user", {
+      const response = await fetch("http://localhost:3310/api/users", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

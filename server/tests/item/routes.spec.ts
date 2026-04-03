@@ -34,40 +34,24 @@ describe("GET /api/items", () => {
   });
 });
 
-// Test suite for the GET /api/items/:id route
-describe("GET /api/items/:id", () => {
-  it("should fetch a single item successfully", async () => {
-    // Mock rows returned from the database
-    const rows = [{}] as Rows;
+describe("find one user", () => {
+  it("should fetch user successfully", async () => {
+    // 1. On crée des mocks
+    const req = { params: { id: "1" } } as unknown as Request; // On simule la requête
+    const res = {
+      json: jest.fn(), // On simule la fonction .json()
+      status: jest.fn().mockReturnThis(), // Pour pouvoir chainer .status(200).json()
+    } as unknown as Response;
 
-    // Mock the implementation of the database query method
-    jest
-      .spyOn(databaseClient, "query")
-      .mockImplementation(async () => [rows, []]);
+    // 2. On appelle la fonction avec les mocks
+    await getOneUser(req, res);
 
-    // Send a GET request to the /api/items/:id endpoint
-    const response = await supertest(app).get("/api/items/1");
+    // 3. On vérifie que res.json a été appelé avec les bonnes données
+    expect(res.json).toHaveBeenCalled();
 
-    // Assertions
-    expect(response.status).toBe(200);
-    expect(response.body).toStrictEqual(rows[0]);
-  });
-
-  it("should fail on invalid id", async () => {
-    // Mock empty rows returned from the database
-    const rows = [] as Rows;
-
-    // Mock the implementation of the database query method
-    jest
-      .spyOn(databaseClient, "query")
-      .mockImplementation(async () => [rows, []]);
-
-    // Send a GET request to the /api/items/:id endpoint with an invalid ID
-    const response = await supertest(app).get("/api/items/0");
-
-    // Assertions
-    expect(response.status).toBe(404);
-    expect(response.body).toEqual({});
+    //  Vérifier le contenu envoyé à res.json() :
+    const data = (res.json as jest.Mock).mock.calls[0][0];
+    expect(data).toBeDefined();
   });
 });
 

@@ -26,12 +26,13 @@ body {
 
 /* --- HEADER & NAVIGATION --- */
 header {
-  display: flex;
+  /*display: flex;*/
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
   background: rgba(0, 0, 0, 0.5);
   min-height: 80px;
+  text-align: center;
 }
 
 /* On utilise 3 zones pour centrer le logo */

@@ -2,6 +2,7 @@ import express from "express";
 import { createGames, getGames } from "./controller/GameController";
 import {
   createUsers,
+  getMe,
   getOneUser,
   getUsers,
 } from "./controller/UserController.js";
@@ -18,7 +19,7 @@ router.post("/users", createUsers);
 router.get("/games", getGames);
 router.post("/game", createGames);
 router.post("/connection", connection);
-router.get("/me", verifyToken, getOneUser);
+router.get("/me", verifyToken, getMe);
 router.post("/logout", (req, res) => {
   res.clearCookie("access_token");
   res.json({ message: "Déconnecté" });

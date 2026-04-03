@@ -1,5 +1,5 @@
 import type { ResultSetHeader } from "mysql2";
-import type { ITask } from "../../../shared/interface/TaskInterface.js";
+import type { ITask } from "../../../interface/TaskInterface";
 import { client } from "../../database/client.js";
 
 export const getAll = async (): Promise<ITask[]> => {
